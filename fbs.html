@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Football Sundays</title>
+	<style>
+		body {
+			font-family: system-ui, sans-serif;
+			background: #f9fafb;
+			color: #111827;
+			margin: 0;
+			padding: 0;
+			line-height: 1.6;
+		}
+
+		header {
+			background: #1f2937;
+			color: #fff;
+			text-align: center;
+			padding: 2rem 1rem;
+			display: flex;
+			justify-content: center;
+		}
+
+		header > div {
+			max-width: 800px;
+		}
+
+		header h1 {
+			margin: 0;
+			font-size: 2rem;
+		}
+
+		header p {
+			margin-top: 0.5rem;
+			color: #d1d5db;
+		}
+
+		main {
+			max-width: 800px;
+			margin: 2rem auto;
+			padding: 0 1rem;
+		}
+
+		table {
+			width: 100%;
+			border-collapse: collapse;
+			margin-top: 1rem;
+			background: #fff;
+			border-radius: 0.5rem;
+			overflow: hidden;
+			box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+		}
+
+		th,
+		td {
+			padding: 0.75rem 1rem;
+			text-align: left;
+		}
+
+		th {
+			background: #f3f4f6;
+			font-weight: 600;
+			color: #374151;
+		}
+
+		tr:nth-child(even) td {
+			background: #f9fafb;
+		}
+
+		tr.past {
+			opacity: 0.4;
+		}
+
+		@media (width <= 800px) {
+			#schedule {
+				thead tr th:nth-child(1),
+				tbody tr td:nth-child(1),
+				thead tr th:nth-child(3),
+				tbody tr td:nth-child(3) {
+					display: none;
+				}
+			}
+		}
+
+		tr[data-no-meet] {
+			td:not(:last-of-type) {
+				text-decoration: line-through;
+			}
+	</style>
+</head>
+
+<body>
+	<header>
+		<div>
+			<h1>Football Sundays @ Gordo and Rachel's Place</h1>
+			<p>Once again we're hosting people on Sundays to watch football, hang with friends, and share some snacks. The time is usually around the Bears game but there are exceptions. Please come and bring your friends and family, all are welcome!</p>
+			<p>No need to bring anything but if you feel you <em>must</em> bring something then a drink or a non-perishable snack would be great!</p>
+		</div>
+	</header>
+	<main>
+		<h2>Schedule</h2>
+		<table id="schedule">
+			<thead>
+				<tr>
+					<th>Week</th>
+					<th>Date</th>
+					<th>Opponent</th>
+					<th>Notes</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr data-date="2025-09-08T19:15:00-05:00" data-no-meet>
+					<td>1</td>
+					<td>{DATE}</td>
+					<td>vs Vikings</td>
+					<td>Not hosting this week</td>
+				</tr>
+				<tr data-date="2025-09-14T12:00:00-05:00">
+					<td>2</td>
+					<td>{DATE}</td>
+					<td>@ Lions</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-09-21T15:25:00-05:00">
+					<td>3</td>
+					<td>{DATE}</td>
+					<td>vs Cowboys</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-09-28T15:25:00-05:00">
+					<td>4</td>
+					<td>{DATE}</td>
+					<td>@ Raiders</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-10-05T15:25:00-05:00">
+					<td>5</td>
+					<td>{DATE}</td>
+					<td></td>
+					<td>Bears bye week, we'll meet for the later games</td>
+				</tr>
+				<tr data-date="2025-10-12T19:15:00-05:00">
+					<td>6</td>
+					<td>{DATE}</td>
+					<td></td>
+					<td>Bears play on Monday, we'll meet for the later games</td>
+				</tr>
+				<tr data-date="2025-10-19T12:00:00-05:00">
+					<td>7</td>
+					<td>{DATE}</td>
+					<td>vs Saints</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-10-26T12:00:00-05:00">
+					<td>8</td>
+					<td>{DATE}</td>
+					<td>@ Ravens</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-11-02T12:00:00-05:00">
+					<td>9</td>
+					<td>{DATE}</td>
+					<td>@ Bengals</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-11-09T12:00:00-05:00">
+					<td>10</td>
+					<td>{DATE}</td>
+					<td>vs Giants</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-11-16T12:00:00-05:00">
+					<td>11</td>
+					<td>{DATE}</td>
+					<td>@ Vikings</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-11-23T12:00:00-05:00">
+					<td>12</td>
+					<td>{DATE}</td>
+					<td>vs Steelers</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-11-28T14:00:00-05:00">
+					<td>13</td>
+					<td>{DATE}</td>
+					<td>@ Eagles</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-12-07T12:00:00-05:00">
+					<td>14</td>
+					<td>{DATE}</td>
+					<td>@ Packers</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-12-14T12:00:00-05:00">
+					<td>15</td>
+					<td>{DATE}</td>
+					<td>vs Browns</td>
+					<td></td>
+				</tr>
+				<tr data-date="2025-12-20T12:00:00-05:00" data-no-meet>
+					<td>16</td>
+					<td>{DATE}</td>
+					<td>vs Packers</td>
+					<td>We're traveling, enjoy the holidays!</td>
+				</tr>
+				<tr data-date="2025-12-28T19:20:00-06:00" data-no-meet>
+					<td>17</td>
+					<td>{DATE}</td>
+					<td>@ 49ers</td>
+					<td>We're traveling, enjoy the holidays!</td>
+				</tr>
+				<tr data-date="2026-01-05T12:00:00-06:00">
+					<td>18</td>
+					<td>{DATE}</td>
+					<td>vs Lions</td>
+					<td></td>
+				</tr>
+			</tbody>
+		</table>
+	</main>
+	<script>
+		const dateFormatter = new Intl.DateTimeFormat('en-US', {
+			month: 'short',
+			day: 'numeric',
+			hour: 'numeric',
+			minute: 'numeric',
+		});
+
+		const now = new Date();
+
+		document.querySelectorAll('#schedule tbody tr').forEach(row => {
+			const dateStr = row.getAttribute('data-date');
+			const gameDate = new Date(dateStr);
+
+			row.querySelectorAll('td:nth-child(2)')[0].innerHTML = dateFormatter.format(gameDate);
+
+			if (gameDate < now) {
+				row.classList.add('past');
+			}
+		});
+	</script>
+</body>
+
+</html>
